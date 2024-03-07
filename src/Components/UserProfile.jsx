@@ -16,7 +16,7 @@ const UserProfile = () => {
 
     useEffect(() => {
         if (!window.sessionStorage.getItem("auth")) navigate('/unauthorized')
-        fetch(process.env.REACT_APP_API_URL_BASE + '/user/' + user_id)
+        fetch(process.env.REACT_APP_API_URL_BASE + user_id)
         .then(res => res.json())
         .then(data => {
             console.log(data)
